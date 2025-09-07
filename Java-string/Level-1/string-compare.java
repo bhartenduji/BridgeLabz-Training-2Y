@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class StringCompare {
@@ -8,3 +9,17 @@ public class StringCompare {
         }
         return true;
     }
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter first string: ");
+        String str1 = scan.next();
+        System.out.print("Enter second string: ");
+        String str2 = scan.next();
+
+        boolean customResult = compareStrings(str1, str2);
+        boolean builtInResult = str1.equals(str2);
+
+        System.out.println(customResult == builtInResult);
+    }
+}
